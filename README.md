@@ -24,3 +24,8 @@ seeing state changes earlier than RPC (`shred-consumer`, `laserstream-probe`),
 and competing for block space (`jito-searcher`).
 
 Each is a focused Rust crate. Build with `cargo build --release`.
+
+## Requirements
+
+- Rust (stable toolchain)
+- Endpoints and keys supplied through environment variables at runtime

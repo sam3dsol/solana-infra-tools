@@ -1,0 +1,24 @@
+# secrets — never commit
+.env
+.env.*
+!.env.example
+*.key
+*id.json
+*keypair*.json
+wallet*.json
+*-state.json
+fire-timing.json
+
+# build artifacts
+/target
+**/target
+Cargo.lock
+node_modules
+package-lock.json
+dist
+.next
+
+# logs / os
+*.log
+.DS_Store
+.claude

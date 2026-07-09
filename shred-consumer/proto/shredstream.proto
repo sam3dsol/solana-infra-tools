@@ -1,0 +1,14 @@
+syntax = "proto3";
+package shredstream;
+
+// Local proxy gRPC: streams reconstructed entries (Jito does the shred reassembly).
+service ShredstreamProxy {
+  rpc SubscribeEntries(SubscribeEntriesRequest) returns (stream Entry);
+}
+
+message SubscribeEntriesRequest {}
+
+message Entry {
+  uint64 slot = 1;     // slot the entry is from
+  bytes  entries = 2;  // bincode-serialized Vec<solana_entry::entry::Entry>
+}

@@ -1,0 +1,21 @@
+[package]
+name = "jito-searcher"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "jito-searcher"
+path = "src/main.rs"
+
+[dependencies]
+tonic = { version = "0.12", features = ["tls", "tls-roots"] }
+prost = "0.13"
+prost-types = "0.13"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+ed25519-dalek = "2"
+bs58 = "0.5"
+base64 = "0.22"
+serde_json = "1"
+
+[build-dependencies]
+tonic-build = "0.12"

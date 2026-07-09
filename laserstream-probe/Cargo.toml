@@ -1,0 +1,15 @@
+[package]
+name = "laserstream-probe"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+helius-laserstream = "0.1.2"
+futures-util = "0.3"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+chrono = "0.4"
+bs58 = "0.5"
+
+[profile.release]
+opt-level = 3
